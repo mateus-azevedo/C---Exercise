@@ -1,14 +1,6 @@
 #include <stdio.h>
 
-void soma(int piValorA, int piValorB, int *piResultado)
-{
-  printf("Endereco de piResultado = %d\n",piResultado);
-  /* o valor esta sendo colocado diretamente na memoria */
-  *piResultado = piValorA + piValorB;
-  printf("Valor de piResultado = %d\n", *piResultado);
-  printf("Endereco de piResultado = %d\n",piResultado);
-  return;
-}
+void soma(int, int, int*);
 
 int main(void)
 {
@@ -26,4 +18,14 @@ int main(void)
   printf("Soma: %d\n", iResultado);
 
   return 0;
+}
+
+void soma(int piValorA, int piValorB, int *piResultado)
+{
+  printf("Endereco de piResultado = %d\n",piResultado);
+  /* o valor esta sendo colocado diretamente na memoria */
+  *piResultado = piValorA + piValorB;
+  printf("Valor de piResultado = %d\n", *piResultado);
+  printf("Endereco de piResultado = %d\n",piResultado);
+  return;
 }
